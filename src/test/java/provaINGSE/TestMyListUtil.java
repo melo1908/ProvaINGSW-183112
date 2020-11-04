@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
+import org.joda.time.LocalDateTime;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -17,9 +18,13 @@ public class TestMyListUtil {
 	
 	static ArrayList<Integer> list1 ;
 	static ArrayList<Integer> list;
+	static LocalDateTime currentDateAndTime;
 	@BeforeClass
 	public static void preparaTest() {
-			System.out.println("ciao inizio");
+			System.out.println("Ora inizio= ");
+			currentDateAndTime = LocalDateTime.now();
+			System.out.println(currentDateAndTime);
+
 			l=new MyListUtil();
 			
 			list1 = new ArrayList<Integer>();
@@ -36,7 +41,7 @@ public class TestMyListUtil {
 	@Test
 	public   void testOrdinaCrescente()
 	{
-		
+		 
 		list1.add(1);
 		list1.add(4);
 		list1.add(12);
@@ -64,6 +69,8 @@ public class TestMyListUtil {
 	public static void fineTest()
 	{
 		//stampa orario fine
-		System.out.println("Ho finito ");
+		System.out.println("Ora fine");
+		currentDateAndTime = LocalDateTime.now();
+		System.out.println(currentDateAndTime);
 	}
 }

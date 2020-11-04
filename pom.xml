@@ -5,10 +5,21 @@
   <version>0.0.1-SNAPSHOT</version>
   
   <!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
-<dependency>
+  <dependencies>
+  
+  <dependency>
+	<dependency>
+  <groupId>junit</groupId>
+  <artifactId>junit</artifactId>
+  <version>4.12</version>
+  <scope>test</scope>
+  </dependency>
+  
     <groupId>joda-time</groupId>
     <artifactId>joda-time</artifactId>
     <version>2.10.8</version>
 </dependency>
   
+  </dependencies>
+
 </project>
